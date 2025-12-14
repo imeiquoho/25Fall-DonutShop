@@ -67,3 +67,25 @@ The project was built incrementally following **Lessons 2–5 of the GLA**, focu
 
 ## 🧱 Project Structure
 
+25Fall-DonutShop
+│
+├── Controls
+│ ├── CoffeeControl.cs
+│ ├── CoffeeControl.Designer.cs
+│ ├── DonutControl.cs
+│ ├── DonutControl.Designer.cs
+│ ├── DonutNumericUpDown.cs
+│ ├── ReceiptControl.cs
+│
+├── Container.cs
+├── Container.Designer.cs
+├── Form1.cs
+├── Form1.Designer.cs
+├── Program.cs
+│
+├── Properties
+│ ├── AssemblyInfo.cs
+│ ├── Resources.resx
+│ ├── Settings.settings
+│
+└── 25Fall-DonutShop.sln
