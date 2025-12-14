@@ -10,32 +10,57 @@ namespace _25Fall_DonutShop
             InitializeComponent();
         }
 
+        // =========================
+        // HELPER: REFRESH RECEIPT
+        // =========================
+        private void RefreshReceipt()
+        {
+            receipt.ReceiptText = container.ToString();
+            receipt.Invalidate(); // forces redraw of owner-drawn receipt
+        }
+
+        // =========================
+        // ADD COFFEE
+        // =========================
         private void btn_AddCoffee_Click(object sender, EventArgs e)
         {
             container.AddCoffee();
+            RefreshReceipt();
         }
 
+        // =========================
+        // ADD DONUT
+        // =========================
         private void btn_AddDonut_Click(object sender, EventArgs e)
         {
             container.AddDonut();
+            RefreshReceipt();
         }
 
+        // =========================
+        // PAY & PRINT RECEIPT
+        // =========================
         private void btn_Payment_Click(object sender, EventArgs e)
         {
-            // Update owner-drawn receipt control
-            receipt.ReceiptText = container.ToString();
+            RefreshReceipt(); // final refresh still valid
         }
 
+        // =========================
+        // CLEAR ALL
+        // =========================
         private void btn_ClearAll_Click(object sender, EventArgs e)
         {
             container.ClearAll();
-            receipt.ReceiptText = "";
+            RefreshReceipt();
         }
 
+        // =========================
+        // CLEAR LAST
+        // =========================
         private void btn_ClearLast_Click(object sender, EventArgs e)
         {
             container.ClearLast();
-            receipt.ReceiptText = container.ToString();
+            RefreshReceipt();
         }
     }
 }
